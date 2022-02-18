@@ -1,10 +1,13 @@
 import React from 'react';
+import TopHeader from '../TopHeader';
+import BlogsView from './BlogsView';
 
 const BlogHome = () => {
     return (
-        <div>
-            <h2>Coming Soon...</h2>
-        </div>
+        <>
+            <TopHeader/>
+            <BlogsView/>
+        </>
     );
 };
 

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import IVideo from './IVideo';
 
-const IHome = () => {
+const IHome = ({searchUrl}) => {
 
-    const url = `https://pixabay.com/api/videos/?key=${process.env.REACT_APP_API_KEY}`;
+    const url = searchUrl || `https://pixabay.com/api/videos/?key=${process.env.REACT_APP_API_KEY}`;
     const [videos,setVideos] =  useState([]);
 
     useEffect(() =>{

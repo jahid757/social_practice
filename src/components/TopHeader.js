@@ -2,9 +2,14 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
-const TopHeader = () => {
+const TopHeader = ({setSearch, video}) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        video === true ? 
+        setSearch(`https://pixabay.com/api/videos/?key=${process.env.REACT_APP_API_KEY}&q=${data.search}`)
+        :
+        setSearch(`https://pixabay.com/api/?key=${process.env.REACT_APP_API_KEY}&q=${data.search}`);
+    };
 
   return (
     <div className="top">
