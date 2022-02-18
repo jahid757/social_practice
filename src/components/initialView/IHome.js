@@ -3,7 +3,7 @@ import IVideo from './IVideo';
 
 const IHome = ({searchUrl}) => {
 
-    const url = searchUrl || `https://pixabay.com/api/videos/?key=${process.env.REACT_APP_API_KEY}`;
+    const url = searchUrl || `https://pixabay.com/api/videos/?key=25753131-a53ac03bd3ad1e68d97b08048`;
     const [videos,setVideos] =  useState([]);
 
     useEffect(() =>{

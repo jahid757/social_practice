@@ -6,9 +6,9 @@ const TopHeader = ({setSearch, video}) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
         video === true ? 
-        setSearch(`https://pixabay.com/api/videos/?key=${process.env.REACT_APP_API_KEY}&q=${data.search}`)
+        setSearch(`https://pixabay.com/api/videos/?key=25753131-a53ac03bd3ad1e68d97b08048&q=${data.search}`)
         :
-        setSearch(`https://pixabay.com/api/?key=${process.env.REACT_APP_API_KEY}&q=${data.search}`);
+        setSearch(`https://pixabay.com/api/?key=25753131-a53ac03bd3ad1e68d97b08048&q=${data.search}`);
     };
 
   return (

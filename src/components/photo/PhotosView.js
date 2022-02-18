@@ -5,7 +5,7 @@ const PhotosView = ({searchUrl}) => {
     const [photos,setPhotos] = useState([]);
 
     useEffect(() => {
-        const url = searchUrl || `https://pixabay.com/api/?key=${process.env.REACT_APP_API_KEY}`;
+        const url = searchUrl || `https://pixabay.com/api/?key=25753131-a53ac03bd3ad1e68d97b08048`;
         fetch(url)
         .then(response => response.json())
         .then(data => {
