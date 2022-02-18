@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const TopHeader = ({setSearch, video}) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
+      console.log(errors);
         video === true ? 
         setSearch(`https://pixabay.com/api/videos/?key=25753131-a53ac03bd3ad1e68d97b08048&q=${data.search}`)
         :
